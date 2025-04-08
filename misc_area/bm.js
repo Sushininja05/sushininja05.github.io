@@ -54,6 +54,8 @@ var advicelist=[
 
 "I move around a lot, it's weird to think how many places I've been in the last few years.",
 
+"I like watering plants, it's a peaceful activity.",
+
 "<a href='../art_area/art.html' style='font-size:9; text-align: center;' title='Going back to my stories..'>Oh yeah, you can go if you want. Didn't mean to talk your ear off y'kno!</a>",
 ]; 
 			
