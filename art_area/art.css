@@ -1,70 +1,89 @@
-/* --Image Grid-- */
-.column {
-    float: right;
-    width: 100px;
-    height: 100px;
-    padding: 2px;
+//*Gallery New*/
+div.gallery {
+  border: 2px solid #ccc;
 }
 
-/* Images In Grid */
-.column img {
-    opacity: 0.3;
-    width: 100px;
-    height: 100px;	
-    cursor: pointer; 
-}
-.column img:hover {
-    opacity: 0.9;
+div.gallery img {
+  background-color: #777;
+  width: 100%;
+  height: auto;
+  max-height: 50%;
 }
 
-/* Clear floats after Grid */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-	position: relative;
+div.gallerynsfw {
 }
 
-/* The expanding image container */
-.container {
-	content: "";
-    position: absolute;
-    display: none;
+div.gallerynsfw img {
+  background-color: #777;
+  -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
+  filter: blur(3px);
+  width: 100%;
+  height: auto;
+  max-height: 50%;
 }
 
-/* Expanding image text */
-#imgname {
-    position: relative;
-    bottom: 0px;
-    left: 0px;
-    color: white;
-	opacity: 1.0;
-    font-size: 28px;
-    font-weight: bold;
-}
-#imgdesc {
-    position: relative;
-    bottom: 0px;
-    left: 0px;
-    color: white;
-	opacity: 1.0;
-    font-size: 18px;
-    font-weight: normal;
+div.name {
+  color: white;
+  opacity: 1.0;
+  font-weight: bold;
+  padding: 7px;
+  text-align: center;
 }
 
-/* Expanded Img Background Fix */
-#expandedImg {
-	background-color: white;
+div.desc {
+  padding: 9px;
+  text-align: center;
 }
 
-/* Closable button inside the expanded image */
-.closebtn {
-    position: absolute;
-    top: 15px;
-    right: -25px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.collapsible {
+  background-color: #777;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 7px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* General Stuff */
@@ -79,7 +98,7 @@
 		text-align: center;
 	}
 	h2{
-		text-align: right;
+		text-align: center;
 	}
 	a {
 		color: gray;
@@ -100,6 +119,3 @@
     ::-webkit-scrollbar-thumb:hover {
     background: gray; 
     }
-	
-/* Top Image Hover Setup */
-.clear {clear: both; margin: 0px}
