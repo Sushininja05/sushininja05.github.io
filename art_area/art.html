@@ -2204,17 +2204,12 @@ for (i = 0; i < coll.length; i++) {
     var secret_stuff = document.getElementById('sekret_content');
     var displaySetting = secret_stuff.style.display;
 
-    // now toggle the clock and the button text, depending on current state
     if (displaySetting == 'block') {
-      // clock is visible. hide it
       secret_stuff.style.display = 'none';
-      // change button text
 	  document.getElementById("topper").innerHTML = '<img src="images/header.png" usemap="#image-map"><map name="image-map"><area target="" alt="Nah, not interested, back to main." title="Nah, not interested, back to main." href="../index.html" coords="590,100,694,198" shape="rect"><area target="" onclick="toggleNSFW()" alt="Warning! NSFW!" title="Warning! NSFW!" coords="104,163,53,104" shape="rect"></map>';
     }
     else {
-      // clock is hidden. show it
       secret_stuff.style.display = 'block';
-      // change button text
 	  document.getElementById("topper").innerHTML = '<img src="images/header_2.png" usemap="#image-map"><map name="image-map"><area target="" onclick="toggleNSFW()" alt="Nah, not interested, back to the actual art." title="Nah, not interested, back to the actual art." coords="590,100,694,198" shape="rect"></map>';
     }
   }
